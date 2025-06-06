@@ -1,0 +1,26 @@
+[
+    {
+        "rx_number": 28198,
+        "patient_id": 1,
+        "drug_name": "Amlodipine",
+        "order_status": "Shipped",
+        "refill_total": 5,
+        "current_refill": 2
+    },
+    {
+        "rx_number": 62839,
+        "patient_id": 1,
+        "drug_name": "Metformin",
+        "order_status": "Pending",
+        "refill_total": 5,
+        "current_refill": 4
+    },
+    {
+        "rx_number": 41364,
+        "patient_id": 1,
+        "drug_name": "Atorvastatin",
+        "order_status": "Delivered",
+        "refill_total": 5,
+        "current_refill": 0
+    }
+]
