@@ -1,0 +1,102 @@
+
+⸻
+
+🧠 2026 Strategy & Innovation Roadmap: ML, RAG, Notifications, and Embedded Agents
+
+⸻
+
+🔷 1. Patient Sentiment & Behavioral Intelligence (Q1–Q2)
+	•	Input: Speech-to-text call recordings
+	•	Output: Emotion + intent labels (e.g., “anxious,” “confused about prior auth,” “trusts doctor”)
+	•	Doctor Benefit: Pre-visit insights into patient psychology and friction points.
+
+⸻
+
+🔷 2. Copay Assistance Trend Prediction (Q2)
+	•	Model: Predict which drugs, payers, and zip codes result in copay failures.
+	•	Use Case: Alert doctor or FRM before rejection.
+	•	Sample Insight: “Patient likely to face high OOP costs — alternative therapy may be required.”
+
+⸻
+
+🔷 3. Therapy Delay Risk Detection (Q2–Q3)
+	•	Sources: PA status, billing exceptions, shipping stalls, missed refill windows.
+	•	ML Classifier: Predict high-risk orders likely to delay beyond SLA.
+	•	Doctor View: “Patient’s medication may be delayed due to PA timeout. Intervention advised.”
+
+⸻
+
+🔷 4. Adherence Risk Scoring + Personalization (Q3–Q4)
+	•	Inputs: Fill behavior, interaction style, refill timing, past delays.
+	•	Outputs:
+	•	Risk level: High, Medium, Low
+	•	Personal flags: Prefers SMS, Needs live call, Often confused by instructions
+	•	Doctor Use Case: Tailor patient discussions during follow-ups.
+
+⸻
+
+🔷 5. Smart Order Summaries with RAGie (Q1 Active; Q2–Q3 Expanded)
+	•	Translate backend events into human-friendly summaries.
+	•	Include urgency, event cause, next action.
+	•	Markdown-Enabled Summary for Doctors:
+⛔ Fill Stopped
+Patient’s billing failed due to code mismatch. Recommend verifying insurance info and reprocessing.
+
+⸻
+
+🔷 6. Intelligent Notification System (Q1–Q4)
+	•	Targeted Roles:
+	•	Doctor: “Your patient’s claim was reversed. Approval may require re-prescription.”
+	•	FRM: “Copay failed. Consider activating backup card.”
+	•	Internal Ops: “High-friction patient. Trending toward disengagement.”
+	•	Triggers: Event rules + model predictions
+	•	Delivery: Portal cards, alert banners, automated emails
+
+⸻
+
+🔷 7. Copay & Financial Barrier Dashboard (Q4)
+	•	Visualize financial hurdles by drug, payer, prescriber.
+	•	Predict “time-to-resolution” or abandonment risk.
+	•	Outcome: Actionable insights for advocacy with pharma/payer teams.
+
+⸻
+
+🔷 8. ⚡ Inline Chat Expansion – From One API to Intelligent Multi-API Agent (Q2–Q4)
+
+Current State:
+	•	Single-API call based on user-entered patient ID or prescription.
+
+Future State:
+	•	Agent Behavior: Understands intent and dynamically decides:
+	•	Which APIs to call (e.g., patient, order, PA, adherence, billing).
+	•	In what order, with contextual chaining.
+	•	Example Interactions:
+	•	User asks: “Why is this patient not starting therapy yet?”
+	•	Chat agent:
+	1.	Calls Order API → Status = On Hold
+	2.	Calls PA API → Status = Expired
+	3.	Calls Call Log Sentiment → Patient confused
+	4.	Returns markdown summary:
+Therapy not started. PA expired. Patient showed confusion in last call. Recommend reinitiating PA and contacting patient.
+	•	User asks: “Has this been billed and shipped?”
+	•	Agent checks billing, shipment, and payment timelines before replying.
+
+Foundation:
+	•	RAG + OpenAI prompt chaining
+	•	Prompt compression to reduce token usage
+	•	Embedded in your existing non-chat UI as an always-available assistant
+
+⸻
+
+🧩 Architecture Themes
+	•	LLM as Aggregation Brain — not just Q&A, but a decision flow engine
+	•	Streaming Summaries + Markdown UX for quick insights
+	•	Non-chat-first UI — AI blends into workflows
+	•	Pre-warming + caching for high-traffic scalability
+
+⸻
+
+Let me know if you’d like:
+	•	A slide deck for leadership presentation
+	•	A Confluence table version
+	•	Agent blueprint diagrams (prompt flow, fallback logic, API selection graph)
