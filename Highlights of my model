@@ -1,0 +1,18 @@
+	1.	Real-Time Data Integration
+Pulls from live APIs and backend systems in real-time — ensuring the prescriber or pharmacist always sees the most current order, PA, and communication details.
+	2.	Multi-Agent Routing Intelligence
+Dynamically routes user questions to the correct backend (orders, PA, shipments, communications) based on intent — without static rules or human triage.
+	3.	Clinical Decision Support with Structured Logic
+Order summaries are generated using rule-based urgency, status classification, and recommended action models — eliminating hallucinations and inconsistencies.
+	4.	Context-Aware Natural Language Generation
+Summaries and chat responses are tailored for healthcare users — removing system jargon and focusing on actionable next steps.
+	5.	Embedded Experience, Not a Separate Tool
+Everything is surfaced inline within the workflow — no separate search, navigation, or login required. It feels like an extension of the application, not an external assistant.
+	6.	RAG-Based and Extensible by Design
+Uses Retrieval-Augmented Generation for grounded answers. Modular architecture supports easy expansion to new data sources and business rules.
+	7.	Performance Optimized for Scalability
+Delivers responses in under 5 seconds with token-optimized prompts and optional caching — scalable to 100k+ queries per day.
+	8.	Designed for Human Roles
+Summaries prioritize clarity for doctors, pharmacists, and case managers — not just raw data. Responses are immediately actionable.
+	9.	Secure & Governed
+Integrated into enterprise authentication and audit frameworks. Sensitive data is passed securely via governed API contracts.
